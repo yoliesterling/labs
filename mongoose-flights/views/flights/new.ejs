@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Add a New Flight</h1>
+    <form action="/flights" method="POST" autocomplete="off">
+        <label>Airline
+        <select id="airline" name="airline">
+            <option value="American">American</option>
+            <option value="Southwest">Southwest</option>
+            <option value="United">United</option>
+        </select>
+    </label>
+
+    <label>Flight Number    
+    <input type="number">
+</label>
+
+        <label>Departs
+        <input type="datetime-local">
+    </label>
+
+        <button type="submit">Add Flight</button>
+    </form>
+</body>
+</html>
