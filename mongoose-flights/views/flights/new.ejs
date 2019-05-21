@@ -4,28 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Add a New Flight</title>
 </head>
 <body>
     <h1>Add a New Flight</h1>
     <form action="/flights" method="POST" autocomplete="off">
-        <label>Airline
-        <select id="airline" name="airline">
-            <option value="American">American</option>
-            <option value="Southwest">Southwest</option>
-            <option value="United">United</option>
-        </select>
-    </label>
 
-    <label>Flight Number    
-    <input type="number">
-</label>
+        <label>Airline
+            <select  name="airline">
+                <option value="American">American</option>
+                <option value="Southwest">Southwest</option>
+                <option value="United">United</option>
+            </select>
+        </label>
+
+        <label>Airport
+            <select name="airport">
+                <option value="AUS">AUS</option>
+                <option value="DAL">DAL</option>
+                <option value="LAX">LAX</option>
+                <option value="SEA">SEA</option>
+            </select>
+        </label>
+
+        <label>Flight Number
+            <input name="flightNo" type="number" min="10" max="9999">
+        </label>
 
         <label>Departs
-        <input type="datetime-local">
-    </label>
+            <input name="departs" type="datetime-local">
+        </label>
 
-        <button type="submit">Add Flight</button>
+        <button type="submit">Save Flight</button>
     </form>
 </body>
 </html>

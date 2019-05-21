@@ -1,8 +1,27 @@
 body {
   padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-family: 'Lora', serif;
+  background-color: #fce1e0;
+  color: darkslategrey;
 }
 
+h1, h2, h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+  text-transform: uppercase;
+  color: black;
+ }
+
 a {
-  color: #00B7FF;
+  color: rgb(56, 30, 53);
+}
+
+table {
+  margin: 20px auto;
+  background-color: white;
+}
+
+th, td {
+  padding: 5px;
+  text-align: center;
 }

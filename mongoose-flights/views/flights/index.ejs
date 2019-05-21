@@ -1,31 +1,46 @@
+
+<% var date = new Date()%>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Mongoose Flights</title>
+    <link rel='stylesheet' href='./stylesheets/style.css' />
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,700|Montserrat:300" rel="stylesheet">
+    <title>Available Flights</title>
 </head>
 <body>
-    <h1>Here's All The Flights</h1>
+    <h1>Available Flights</h1>
+    
+    <a href="/flights/new">
+        <p>Add A New Flight</p>
+    </a>
+
     <table>
         <thead>
             <tr>
                 <th>Airline</th>
+                <th>Airport</th>
                 <th>Flight Number</th>
                 <th>Departs</th>
+                <th>Flight Details</th>
             </tr>
         </thead>
         <tbody>
-            <% flights.forEach(f => {%>
+            <% flights.forEach(f => { %>
                 <tr>
                     <td><%= f.airline %></td>
+                    <td><%= f.airport %></td>
                     <td><%= f.flightNo %></td>
-                    <td><%= f.departs %></td>
+                    <td><%= moment(f.departs).format('dddd, MMMM Do YYYY') %></td>
+                    <td>
+                        <a href="/flights/<%= f._id %>">Details</a>
+                    </td>
                 </tr>
-            <%}) %>
+            <% }) %>
         </tbody>
     </table>
-    
 </body>
 </html>
